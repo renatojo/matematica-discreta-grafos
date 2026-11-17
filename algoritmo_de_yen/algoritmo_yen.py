@@ -89,7 +89,7 @@ def custo_do_caminho(grafo, caminho):
     return sum(grafo[u][v] for u, v in zip(caminho, caminho[1:]))
 
 
-def yen(grafo, vertice_origem, vertice_destino, k):
+def yen(grafo, vertice_origem, vertice_destino, k=5):
     """Retorna uma lista com até k tuplas (caminho, custo), do menor para o maior."""
 
     # o primeiro menor caminho vem de um Dijkstra normal, sem bloqueios
