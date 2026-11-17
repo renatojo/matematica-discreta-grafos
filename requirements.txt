@@ -1,0 +1,4 @@
+pandas
+networkx
+lxml
+numpy
