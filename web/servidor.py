@@ -49,6 +49,7 @@ class Handler(BaseHTTPRequestHandler):
             with open(os.path.join(AQUI, "buscador_passagens.html"), "rb") as f:
                 return self._enviar(200, "text/html; charset=utf-8", f.read())
         if url.path == "/buscar":
+            # Função que executa o algoritmo de yen
             q = {k: v[0] for k, v in parse_qs(url.query).items()}
             try:
                 o, d, k = q["origem"], q["destino"], int(q.get("k", 3))
