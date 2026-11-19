@@ -12,7 +12,9 @@ from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 import pandas as pd
 import networkx as nx
-from algoritmo_de_yen import yen
+import sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+from algoritmo_de_yen.algoritmo_yen import yen
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 PORTA = 8000
